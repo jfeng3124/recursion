@@ -23,7 +23,8 @@ var stringifyJSON = function(obj) {
   } else if (typeof obj === 'object') {
   	var arr1 = [];
   	for (var key in obj) {
-  		if (typeof obj[key] === 'string' || typeof obj[key] === 'number' || typeof obj[key] === 'boolean' || typeof obj[key] === 'object') {
+  		if (typeof obj[key] === 'string' || typeof obj[key] === 'number' || 
+          typeof obj[key] === 'boolean' || typeof obj[key] === 'object') {
   		  var strKey = '"' + key + '":'; 
   		  arr1.push(strKey +  stringifyJSON(obj[key]));
   		} 
