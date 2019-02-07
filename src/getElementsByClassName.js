@@ -5,7 +5,7 @@
 //You should use document.body, element.childNodes, and element.classList
 
 // But instead we're going to implement it from scratch:
-var getElementsByClassName = function(className) {
+var getElementsByClassName = className => {
   var result = [];
   var hasClassName = element => {
   	if (element.classList && element.classList.contains(className)) {
